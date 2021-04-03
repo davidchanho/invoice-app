@@ -1,5 +1,6 @@
 import { normalize } from "polished";
 import { createGlobalStyle } from "styled-components";
+import Colors from "./colors";
 
 const GlobalStyle = createGlobalStyle`
 html {
@@ -17,6 +18,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: ${Colors.background}
 
   h1 {
   }

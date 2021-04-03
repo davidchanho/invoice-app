@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RoundedIcon } from "../_ui/icons";
+import { RoundedIcon } from "../_shared/icons";
 
 function ToggleDarkMode() {
   const [isDark, setDark] = useState(false);

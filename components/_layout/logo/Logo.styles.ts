@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RoundedIcon } from "../_ui/icons";
+import { RoundedIcon } from "../../_shared/icons";
 
 export const StyledLogo = styled(RoundedIcon)`
   width: 103px;

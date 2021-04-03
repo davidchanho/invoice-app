@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { fetchInvoices, selectInvoices } from "../../../app/invoicesSlice";
-import InvoiceItem from "../invoice-item";
-
-const Table = styled.table`
-
-`;
+import InvoiceItem from "../../invoice-item";
 
 function Section() {
   const { invoices, loading, error } = useAppSelector(selectInvoices);
@@ -18,11 +13,11 @@ function Section() {
 
   const renderInvoices = () => {
     if (loading) {
-      return <div>loading...</div>;
+      return <>loading...</>;
     }
 
     if (error) {
-      return <div>error</div>;
+      return <>error</>;
     }
 
     if (invoices.length === 0) {
@@ -30,15 +25,17 @@ function Section() {
     }
 
     return (
-      <>
-        {invoices?.map((invoice) => {
-          return <InvoiceItem key={invoice.id} {...invoice} />;
-        })}
-      </>
+      <table>
+        <tbody>
+          {invoices?.map((invoice) => {
+            return <InvoiceItem key={invoice.id} {...invoice} />;
+          })}
+        </tbody>
+      </table>
     );
   };
 
-  return <Table>{renderInvoices()}</Table>;
+  return <div>{renderInvoices()}</div>;
 }
 
 export default Section;

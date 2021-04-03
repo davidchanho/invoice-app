@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import InvoicesHeader from "./header";
+import InvoicesHeader from "../invoices-header";
 import Section from "./section";
 
 const Page = styled.div`

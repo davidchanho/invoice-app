@@ -34,7 +34,9 @@ export const invoicesSlice = createSlice({
       state.invoices = [...state.invoices, action.payload];
     },
     edit: (state, action: PayloadAction<IInvoice>) => {
-      const index = state.invoices.findIndex(invoice => invoice.id === action.payload.id)
+      const index = state.invoices.findIndex(
+        (invoice) => invoice.id === action.payload.id
+      );
       state.loading = false;
       state.invoices[index] = action.payload;
     },
@@ -55,7 +57,15 @@ export const invoicesSlice = createSlice({
   },
 });
 
-export const { fetch, fetchDetails, create, edit, remove, loading, error } = invoicesSlice.actions;
+export const {
+  fetch,
+  fetchDetails,
+  create,
+  edit,
+  remove,
+  loading,
+  error,
+} = invoicesSlice.actions;
 export default invoicesSlice.reducer;
 
 export const selectInvoices = (state: RootState) => state.invoices;
@@ -85,27 +95,27 @@ export const fetchInvoiceDetails = (id: string) => async (dispatch) => {
 export const createInvoice = () => async (dispatch) => {
   dispatch(loading());
   try {
-    const { data } = await axios.get(url);
+    const { data } = await axios.post(url);
     dispatch(create(data));
   } catch (err) {
     dispatch(error());
   }
 };
 
-export const editInvoice = () => async (dispatch) => {
+export const editInvoice = (invoice: IInvoice) => async (dispatch) => {
   dispatch(loading());
   try {
-    const { data } = await axios.get(url);
+    const { data } = await axios.patch(url, invoice);
     dispatch(edit(data));
   } catch (err) {
     dispatch(error());
   }
 };
 
-export const removeInvoice = () => async (dispatch) => {
+export const removeInvoice = (invoice: IInvoice) => async (dispatch) => {
   dispatch(loading());
   try {
-    const { data } = await axios.get(url);
+    const { data } = await axios.delete(url);
     dispatch(remove(data));
   } catch (err) {
     dispatch(error());

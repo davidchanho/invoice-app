@@ -1,17 +1,23 @@
 import React from "react";
+import { SkeletonTheme } from "react-loading-skeleton";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import { ThemeProvider } from "styled-components";
-import store from "../app/store";
+import store, { persistor } from "../app/store";
 import GlobalStyle from "../styles/Global";
 import { theme } from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider theme={theme}>
+          <SkeletonTheme color="#ffffff" highlightColor="#444">
+            <GlobalStyle />
+            <Component {...pageProps} />
+          </SkeletonTheme>
+        </ThemeProvider>
+      </PersistGate>
     </Provider>
   );
 }
