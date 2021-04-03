@@ -37,17 +37,26 @@ const black = {
 };
 
 const Colors = {
+  lightPrimary: primary["100"],
   primary: primary["200"],
-  primaryHover: primary["100"],
+
+  lightSecondary: grey["100"],
   secondary: grey["200"],
+
+  lightDanger: danger["100"],
   danger: danger["200"],
-  dangerHover: danger["100"],
+
   lightSuccess: success["100"],
   success: success["200"],
+
   lightWarning: warning["100"],
   warning: warning["200"],
-  background: grey["100"],
+
+  dark: grey['300'],
+  darker: grey['400'],
+
   darkBackground: black["400"],
+
   white: white["100"],
 };
 

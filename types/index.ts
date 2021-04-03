@@ -5,6 +5,13 @@ export interface IItem {
   total: number;
 }
 
+interface IAddress {
+  street: string;
+  city: string;
+  postCode: string;
+  country: string;
+}
+
 export interface IInvoice {
   id: string;
   createdAt: string;
@@ -14,18 +21,8 @@ export interface IInvoice {
   clientName: string;
   clientEmail: string;
   status: string;
-  senderAddress: {
-    street: string;
-    city: string;
-    postCode: string;
-    country: string;
-  };
-  clientAddress: {
-    street: string;
-    city: string;
-    postCode: string;
-    country: string;
-  };
+  senderAddress: IAddress;
+  clientAddress: IAddress;
   items: IItem[];
   total: number;
 }

@@ -3,16 +3,22 @@ import Colors from "./colors";
 export const theme = {
   colors: {
     primary: Colors.primary,
-    primaryHover: Colors.primaryHover,
+    lightPrimary: Colors.lightPrimary,
+
     secondary: Colors.secondary,
+    lightSecondary: Colors.lightSecondary,
+
     danger: Colors.danger,
-    dangerHover: Colors.dangerHover,
-    lightWarning: Colors.lightWarning,
+    lightDanger: Colors.lightDanger,
+
     warning: Colors.warning,
-    lightSuccess: Colors.lightSuccess,
+    lightWarning: Colors.lightWarning,
+
     success: Colors.success,
-    background: Colors.background,
+    lightSuccess: Colors.lightSuccess,
+
     darkBackground: Colors.darkBackground,
+
     white: Colors.white,
   },
 };

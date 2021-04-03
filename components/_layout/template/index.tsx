@@ -1,10 +1,12 @@
 import React from "react";
 import SideBar from "../../sidebar";
-import { Main } from "./Template.styles";
+import NextHead from "../head";
+import Main from "./Template.styles";
 
 function Template({ children }) {
   return (
     <div>
+      <NextHead />
       <Main>
         <SideBar />
         {children}
