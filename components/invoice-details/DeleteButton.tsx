@@ -1,5 +1,5 @@
 import React from "react";
-import { DangerButton } from ".";
+import { DangerButton } from "../_shared/buttons";
 
 function DeleteButton() {
   return <DangerButton>Delete</DangerButton>;

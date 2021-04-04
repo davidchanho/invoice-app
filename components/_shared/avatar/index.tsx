@@ -1,5 +1,5 @@
 import React from "react";
-import { RoundedIcon } from "../_shared/icons";
+import { RoundedIcon } from "../icons";
 
 function Avatar() {
   return (

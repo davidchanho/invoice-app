@@ -23,6 +23,8 @@ const grey = {
   "200": "hsl(231, 73%, 93%)",
   "300": "hsl(231, 37%, 63%)",
   "400": "hsl(231, 20%, 61%)",
+  "500": "hsl(231, 20%, 27%)",
+  "600": "hsl(232, 20%, 36%)",
 };
 
 const white = {
@@ -42,6 +44,9 @@ const Colors = {
 
   lightSecondary: grey["100"],
   secondary: grey["200"],
+  darkSecondary: grey["300"],
+  darkerSecondary: grey["400"],
+  darkestSecondary: grey["500"],
 
   lightDanger: danger["100"],
   danger: danger["200"],
@@ -52,11 +57,8 @@ const Colors = {
   lightWarning: warning["100"],
   warning: warning["200"],
 
-  dark: grey['300'],
-  darker: grey['400'],
-
   darkBackground: black["400"],
-
+  ...black,
   white: white["100"],
 };
 

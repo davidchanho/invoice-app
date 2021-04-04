@@ -1,5 +1,5 @@
 import React from "react";
-import { PrimaryButton } from ".";
+import { PrimaryButton } from "../_shared/buttons";
 
 function MarkAsPaidButton() {
   return <PrimaryButton>Mark as Paid</PrimaryButton>;

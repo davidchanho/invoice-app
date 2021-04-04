@@ -1,12 +1,12 @@
-import React from 'react'
-import { SecondaryButton } from '.'
+import React from "react";
+import { SecondaryButton } from ".";
 
 function AddNewItemButton() {
-    return (
-        <SecondaryButton>
-            + Add New Item
-        </SecondaryButton>
-    )
+  return (
+    <SecondaryButton>
+      <img src="assets/icon-plus.svg" /> Add New Item
+    </SecondaryButton>
+  );
 }
 
-export default AddNewItemButton
+export default AddNewItemButton;

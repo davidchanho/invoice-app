@@ -1,20 +1,14 @@
 import React from "react";
-import styled from "styled-components";
 import { useAppSelector } from "../../app/hooks";
 import { selectInvoices } from "../../app/invoicesSlice";
 import { Button } from "../_shared/buttons";
-
-const Header = styled.header`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
+import FilterStatusSelect from "./FilterStatusSelect";
 
 function InvoicesHeader() {
   const { invoices } = useAppSelector(selectInvoices);
+
   return (
-    <Header>
+    <div>
       <header>
         <h1>Invoices</h1>
         <p>
@@ -23,17 +17,13 @@ function InvoicesHeader() {
             : "No invoices"}
         </p>
       </header>
-      
-      <select name="Filter by status" id="">
-        <option>Paid</option>
-        <option>Pending</option>
-        <option>Draft</option>
-      </select>
+
+      <FilterStatusSelect />
 
       <Button>
         <img src="assets/icon-plus.svg" /> New Invoice
       </Button>
-    </Header>
+    </div>
   );
 }
 

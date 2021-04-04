@@ -115,7 +115,7 @@ export const editInvoice = (invoice: IInvoice) => async (dispatch) => {
 export const removeInvoice = (invoice: IInvoice) => async (dispatch) => {
   dispatch(loading());
   try {
-    const { data } = await axios.delete(url);
+    const { data } = await axios.delete(url, { data: { id: invoice.id } });
     dispatch(remove(data));
   } catch (err) {
     dispatch(error());

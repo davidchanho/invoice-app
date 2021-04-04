@@ -1,28 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import styled from "styled-components";
 import { IInvoice } from "../../types";
-import Status from "../status";
-
-interface Props {
-  status: string;
-}
-
-const Container = styled.tr<Props>`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  
-
-  td {
-    width: 50%;
-    padding: 20px;
-  }
-`;
+import Status from "../_shared/status";
 
 function InvoiceItem({ id, createdAt, clientName, total, status }: IInvoice) {
   return (
-    <Container status={status}>
+    <tr>
       <td>
         #<b>{id}</b>
       </td>
@@ -44,7 +27,7 @@ function InvoiceItem({ id, createdAt, clientName, total, status }: IInvoice) {
           />
         </Link>
       </td>
-    </Container>
+    </tr>
   );
 }
 

@@ -5,9 +5,11 @@ import logger from "redux-logger";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
+import appReducer from "./appSlice";
 import invoicesReducer from "./invoicesSlice";
 
 const rootReducer = combineReducers({
+  app: appReducer,
   invoices: invoicesReducer,
 });
 

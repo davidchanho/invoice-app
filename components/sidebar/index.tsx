@@ -1,18 +1,33 @@
 import React from "react";
-import ToggleDarkMode from "../toggle-dark-mode";
+import styled from "styled-components";
 import Logo from "../_layout/logo";
-import Avatar from "../avatar";
-import StyledAside from "./Sidebar.styles";
+import Avatar from "../_shared/avatar";
+import ToggleDarkMode from "./DarkModeButton";
+
+const StyledSidebar = styled.aside`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: ${(props) => props.theme.colors.darkestSecondary};
+  .spacer {
+    flex: 0.9;
+  }
+  div {
+    border-left: 1px solid black;
+    padding-left: 30px;
+  }
+`;
 
 function SideBar() {
   return (
-    <StyledAside>
+    <StyledSidebar>
       <Logo />
+      <span className="spacer" />
+      <ToggleDarkMode />
       <div>
-        <ToggleDarkMode />
         <Avatar />
       </div>
-    </StyledAside>
+    </StyledSidebar>
   );
 }
 

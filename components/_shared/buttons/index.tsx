@@ -1,9 +1,10 @@
+import { between } from "polished";
 import styled from "styled-components";
 
 export const Button = styled.button`
   color: white;
   border-radius: 24px;
-  width: 100%;
+  width: ${between("73px", "350px")};
   height: 48px;
   border: none;
   outline: none;
@@ -14,7 +15,6 @@ export const Button = styled.button`
 
 export const PrimaryButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.primary};
-
   &:hover {
     background-color: ${(props) => props.theme.colors.lightPrimary};
   }
