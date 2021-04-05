@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const FormGroup = styled.div`
-  display: flex;
+  display: block;
   flex-direction: column;
-  width: 120px;
+  width: 6rem;
+  margin-top: 0.7rem;
 `;
 
 export default FormGroup;

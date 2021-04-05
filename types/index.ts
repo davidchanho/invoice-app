@@ -5,15 +5,15 @@ export interface IItem {
   total: number;
 }
 
-interface IAddress {
-  street: string;
-  city: string;
-  postCode: string;
-  country: string;
+export const item = {
+  name: "",
+  quantity: 0,
+  price: 0,
+  total: 0,
 }
 
 export interface IInvoice {
-  id: string;
+  id?: string;
   createdAt: string;
   paymentDue: string;
   description: string;
@@ -21,8 +21,38 @@ export interface IInvoice {
   clientName: string;
   clientEmail: string;
   status: string;
-  senderAddress: IAddress;
-  clientAddress: IAddress;
+
+  senderStreet: string;
+  senderCity: string;
+  senderPostCode: string;
+  senderCountry: string;
+
+  clientStreet: string;
+  clientCity: string;
+  clientPostCode: string;
+  clientCountry: string;
+
   items: IItem[];
   total: number;
 }
+
+export const invoice: IInvoice = {
+  id: "",
+  createdAt: "",
+  paymentDue: "",
+  description: "",
+  paymentTerms: 0,
+  clientName: "",
+  clientEmail: "",
+  status: "",
+  senderStreet: "",
+  senderCity: "",
+  senderPostCode: "",
+  senderCountry: "",
+  clientStreet: "",
+  clientCity: "",
+  clientPostCode: "",
+  clientCountry: "",
+  items: [],
+  total: 0,
+};
