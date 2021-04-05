@@ -3,7 +3,7 @@ import { combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import logger from "redux-logger";
 import { persistReducer, persistStore } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import storage from "../storage";
 import thunk from "redux-thunk";
 import appReducer from "./appSlice";
 import invoicesReducer from "./invoicesSlice";

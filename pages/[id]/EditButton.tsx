@@ -1,5 +1,5 @@
 import React from 'react'
-import { SecondaryButton } from '../_shared/buttons'
+import { SecondaryButton } from '../../components/_shared/buttons'
 
 function EditButton() {
     return (

@@ -4,7 +4,7 @@ import { useAppDispatch } from "../../app/hooks";
 
 function FilterStatusSelect() {
   const dispatch = useAppDispatch();
-  const [filter, setFilter] = useState("ALL");
+  const [filter, setFilter] = useState("all");
 
   const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const status = e.target.value;

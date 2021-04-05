@@ -8,9 +8,10 @@ function Invoices() {
   const { invoices, loading, error } = useAppSelector(selectInvoices);
   const dispatch = useAppDispatch();
   const { filterStatus } = useAppSelector(selectApp);
-  const filteredInvoices = invoices.filter(
-    (invoice) => invoice.status === filterStatus
-  );
+  const filteredInvoices =
+    filterStatus === "all"
+      ? invoices
+      : invoices.filter((invoice) => invoice.status === filterStatus);
 
   useEffect(() => {
     dispatch(fetchInvoices());
@@ -22,10 +23,6 @@ function Invoices() {
     }
 
     if (error) {
-      return <div>error</div>;
-    }
-
-    if (invoices.length === 0) {
       return (
         <img
           src="assets/illustration-empty.svg"
@@ -38,13 +35,9 @@ function Invoices() {
 
     return (
       <>
-        {filterStatus === "all"
-          ? invoices?.map((invoice) => {
-              return <InvoiceItem key={invoice.id} {...invoice} />;
-            })
-          : filteredInvoices?.map((invoice) => {
-              return <InvoiceItem key={invoice.id} {...invoice} />;
-            })}
+        {filteredInvoices?.map((invoice) => {
+          return <InvoiceItem key={invoice.id} {...invoice} />;
+        })}
       </>
     );
   };

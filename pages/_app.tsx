@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ThemeProvider theme={theme}>
-          <SkeletonTheme color="#ffffff" highlightColor="#444">
+          <SkeletonTheme color="#000000" highlightColor="#444">
             <GlobalStyle />
             <Component {...pageProps} />
           </SkeletonTheme>
