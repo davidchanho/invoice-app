@@ -14,7 +14,7 @@ function DarkModeButton() {
   return (
     <RoundedIcon
       onClick={onToggleDark}
-      src={darkMode ? "assets/icon-sun.svg" : "assets/icon-moon.svg"}
+      src={darkMode ? "/assets/icon-sun.svg" : "/assets/icon-moon.svg"}
       alt="toggle dark menu"
       width={20}
       height={20}

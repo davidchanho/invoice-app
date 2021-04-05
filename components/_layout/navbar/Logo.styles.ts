@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { RoundedIcon } from "../../_shared/icons";
 
-const Icon = styled(RoundedIcon)`
+const Logo = styled(RoundedIcon)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,4 +13,4 @@ const Icon = styled(RoundedIcon)`
   );
 `;
 
-export default Icon;
+export default Logo;

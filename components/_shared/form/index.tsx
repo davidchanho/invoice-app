@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Form = styled.form`
-  padding: 2rem;
+  padding: 0 2rem;
 `;
 
 export default Form;

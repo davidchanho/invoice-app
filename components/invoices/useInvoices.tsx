@@ -1,7 +1,8 @@
+import Image from "next/image";
 import React, { useEffect } from "react";
 import { selectApp } from "../../app/appSlice";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { selectInvoices, fetchInvoices } from "../../app/invoicesSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { fetchInvoices, selectInvoices } from "../../app/invoicesSlice";
 import InvoiceItem from "./InvoiceItem";
 
 const useInvoices = () => {
@@ -24,8 +25,8 @@ const useInvoices = () => {
 
     if (error) {
       return (
-        <img
-          src="assets/illustration-empty.svg"
+        <Image
+          src="/assets/illustration-empty.svg"
           alt="no invoices found"
           width={217}
           height={277}
@@ -41,7 +42,7 @@ const useInvoices = () => {
       </>
     );
   };
-  
+
   return { renderInvoices };
 };
 

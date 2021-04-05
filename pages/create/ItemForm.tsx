@@ -1,48 +1,26 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React from "react";
 import Form from "../../components/_shared/form";
 import FormRow from "../../components/_shared/form-row";
-import TextField from "../../components/_shared/text-field";
-import { IItem, item } from "../../types";
+import { Icon } from "../../components/_shared/icons";
+import useItemForm from "./useItemForm";
 
 function ItemForm() {
-  const [form, setForm] = useState<IItem>(item);
-
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
-
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(form);
-  };
+  const { register, handleSubmit, errors, onSubmit, total } = useItemForm();
 
   return (
-    <Form onSubmit={onSubmit}>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <FormRow>
-        <TextField
-          onChange={onChange}
-          name="name"
-          value={form.name}
-          type="text"
-        />
-        <TextField
-          onChange={onChange}
-          name="quantity"
-          value={form.quantity}
-          type="number"
-        />
-        <TextField
-          onChange={onChange}
-          name="price"
-          value={form.price}
-          type="number"
-        />
-        <p>{form.quantity * form.price}</p>
-        <img
-          src="assets/icon-delete.svg"
+        <input name="name" type="text" ref={register} />
+        <p>{errors.name?.message}</p>
+        <input name="quantity" type="number" ref={register} />
+        <p>{errors.quantity?.message}</p>
+        <input name="price" type="number" ref={register} />
+        <p>{errors.price?.message}</p>
+        <p>{total}</p>
+        <Icon
+          src="/assets/icon-delete.svg"
           alt="delete item"
-          width={12.44}
+          width={12}
           height={16}
         />
       </FormRow>

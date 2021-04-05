@@ -14,13 +14,13 @@ export const item = {
 
 export interface IInvoice {
   id?: string;
-  createdAt: string;
-  paymentDue: string;
+  createdAt?: string;
+  paymentDue?: string;
   description: string;
   paymentTerms: number;
   clientName: string;
   clientEmail: string;
-  status: string;
+  status?: string;
 
   senderStreet: string;
   senderCity: string;
@@ -32,8 +32,8 @@ export interface IInvoice {
   clientPostCode: string;
   clientCountry: string;
 
-  items: IItem[];
-  total: number;
+  items?: IItem[];
+  total?: number;
 }
 
 export const invoice: IInvoice = {

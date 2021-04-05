@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import DeleteButton from "../invoice-details/DeleteButton";
 
 const StyledPrompt = styled.div`
   
@@ -16,7 +15,7 @@ function Prompt() {
       </p>
       <footer>
         <button>cancel</button>
-        <DeleteButton />
+        <button>delete</button>
       </footer>
     </StyledPrompt>
   );

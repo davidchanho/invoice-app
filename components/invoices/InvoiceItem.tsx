@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { IInvoice } from "../../types";
+import { Icon } from "../_shared/icons";
 import Status from "../_shared/status";
 
 function InvoiceItem({ id, createdAt, clientName, total, status }: IInvoice) {
@@ -24,8 +25,8 @@ function InvoiceItem({ id, createdAt, clientName, total, status }: IInvoice) {
           <Status status={status}>{status}</Status>
         </td>
         <td>
-          <img
-            src="assets/icon-arrow-right.svg"
+          <Icon
+            src="/assets/icon-arrow-right.svg"
             alt="right arrow"
             width={4}
             height={8}

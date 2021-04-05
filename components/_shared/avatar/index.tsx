@@ -4,7 +4,7 @@ import { RoundedIcon } from "../icons";
 function Avatar() {
   return (
     <RoundedIcon
-      src="assets/image-avatar.jpg"
+      src="/assets/image-avatar.jpg"
       alt="avatar image"
       width={40}
       height={40}

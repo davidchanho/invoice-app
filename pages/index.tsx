@@ -5,6 +5,7 @@ import FilterStatusSelect from "../components/invoices/FilterStatusSelect";
 import useInvoices from "../components/invoices/useInvoices";
 import Template from "../components/_layout/template";
 import { PrimaryButton } from "../components/_shared/buttons";
+import { Icon } from "../components/_shared/icons";
 
 export default function Home() {
   const { renderInvoices } = useInvoices();
@@ -25,7 +26,13 @@ export default function Home() {
         <FilterStatusSelect />
 
         <PrimaryButton>
-          <img src="assets/icon-plus.svg" /> New Invoice
+          <Icon
+            src="/assets/icon-plus.svg"
+            alt="add new invoice"
+            width={30}
+            height={30}
+          />{" "}
+          New Invoice
         </PrimaryButton>
       </div>
       <table>

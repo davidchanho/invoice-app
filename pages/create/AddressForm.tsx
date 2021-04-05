@@ -1,58 +1,35 @@
-import React, { ChangeEvent } from "react";
-import form from "../../components/_shared/form";
+import React from "react";
 import FormGroup from "../../components/_shared/form-group";
-import FormLabel from "../../components/_shared/form-label";
 import FormRow from "../../components/_shared/form-row";
-import TextField from "../../components/_shared/text-field";
+import { AddressFormProps } from "./AddressForm.types";
 
-interface Props {
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  receiver: string;
-}
-
-function AddressForm({ handleChange, receiver }: Props) {
+function AddressForm({ register, receiver, errors }: AddressFormProps) {
   return (
-    <div>
+    <>
       <FormGroup>
-        <FormLabel>Street Address</FormLabel>
-        <TextField
-          onChange={handleChange}
-          name={`${receiver}Street`}
-          value={form[`${receiver}Street`]}
-          type="text"
-        />
+        <label>Street Address</label>
+        <input name={`${receiver}Street`} type="text" ref={register} />
+        <p>{errors[`${receiver}Street`]?.message}</p>
       </FormGroup>
 
       <FormRow>
         <FormGroup>
-          <FormLabel>City</FormLabel>
-          <TextField
-            onChange={handleChange}
-            name={`${receiver}City`}
-            value={form[`${receiver}City`]}
-            type="text"
-          />
+          <label>City</label>
+          <input name={`${receiver}City`} type="text" ref={register} />
+          <p>{errors[`${receiver}City`]?.message}</p>
         </FormGroup>
         <FormGroup>
-          <FormLabel>Post Code</FormLabel>
-          <TextField
-            onChange={handleChange}
-            name={`${receiver}PostCode`}
-            value={form[`${receiver}PostCode`]}
-            type="text"
-          />
+          <label>Post Code</label>
+          <input name={`${receiver}PostCode`} type="text" ref={register} />
+          <p>{errors[`${receiver}PostCode`]?.message}</p>
         </FormGroup>
         <FormGroup>
-          <FormLabel>Country</FormLabel>
-          <TextField
-            onChange={handleChange}
-            name={`${receiver}Country`}
-            value={form[`${receiver}Country`]}
-            type="text"
-          />
+          <label>Country</label>
+          <input name={`${receiver}Country`} type="text" ref={register} />
+          <p>{errors[`${receiver}Country`]?.message}</p>
         </FormGroup>
       </FormRow>
-    </div>
+    </>
   );
 }
 
