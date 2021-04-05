@@ -1,24 +1,30 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
-import { IInvoice } from "../../types";
-import DeleteButton from "./DeleteButton";
-import EditButton from "./EditButton";
-import MarkAsPaidButton from "./MarkAsPaidButton";
+import {
+  DangerButton,
+  PrimaryButton,
+  SecondaryButton,
+} from "../../components/_shared/buttons";
 
-function InvoiceDetails({ status }: IInvoice) {
+function InvoiceDetails() {
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
     <>
-      <Link href='/'>go back</Link>
-      <header></header>
-      <div>
-        <div>Status {status}</div>{" "}
+      <Link href="/">go back</Link>
+      <header>
+        <div>Status</div>{" "}
         <div>
-          <EditButton />
-          <DeleteButton />
-          <MarkAsPaidButton />
+          <SecondaryButton>Edit</SecondaryButton>
+          <DangerButton>Delete</DangerButton>
+          <PrimaryButton>Mark as Paid</PrimaryButton>
         </div>
+      </header>
+      <div>
+        <div>{id}</div>
       </div>
-      <div></div>
     </>
   );
 }

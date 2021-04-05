@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { selectApp, toggleDarkMode } from "../../app/appSlice";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { RoundedIcon } from "../_shared/icons";
+import React from "react";
+import { selectApp, toggleDarkMode } from "../../../app/appSlice";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { RoundedIcon } from "../../_shared/icons";
 
 function DarkModeButton() {
   const { darkMode } = useAppSelector(selectApp);
   const dispatch = useAppDispatch();
 
   const onToggleDark = () => {
-    dispatch(toggleDarkMode())
+    dispatch(toggleDarkMode());
   };
 
   return (

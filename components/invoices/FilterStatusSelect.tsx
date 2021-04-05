@@ -1,20 +1,18 @@
-import React, { ChangeEvent, useState } from "react";
-import { changeStatus } from "../../app/appSlice";
-import { useAppDispatch } from "../../app/hooks";
+import React, { ChangeEvent } from "react";
+import { changeStatus, selectApp } from "../../app/appSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 function FilterStatusSelect() {
   const dispatch = useAppDispatch();
-  const [filter, setFilter] = useState("all");
+  const { filterStatus } = useAppSelector(selectApp);
 
   const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const status = e.target.value;
-    setFilter(status);
-    dispatch(changeStatus(status));
+    dispatch(changeStatus(e.target.value));
   };
 
   return (
     <select
-      value={filter}
+      value={filterStatus}
       onChange={onChange}
       name="Filter by status"
       id="filter-status"

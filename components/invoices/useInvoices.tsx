@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { selectApp } from "../../app/appSlice";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { fetchInvoices, selectInvoices } from "../../app/invoicesSlice";
-import InvoiceItem from "../invoice-item";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { selectInvoices, fetchInvoices } from "../../app/invoicesSlice";
+import InvoiceItem from "./InvoiceItem";
 
-function Invoices() {
+const useInvoices = () => {
   const { invoices, loading, error } = useAppSelector(selectInvoices);
   const dispatch = useAppDispatch();
   const { filterStatus } = useAppSelector(selectApp);
@@ -41,12 +41,8 @@ function Invoices() {
       </>
     );
   };
+  
+  return { renderInvoices };
+};
 
-  return (
-    <table>
-      <tbody>{renderInvoices()}</tbody>
-    </table>
-  );
-}
-
-export default Invoices;
+export default useInvoices;
