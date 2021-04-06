@@ -35,9 +35,9 @@ export default function Home() {
           New Invoice
         </PrimaryButton>
       </div>
-      <table>
-        <tbody>{renderInvoices()}</tbody>
-      </table>
+      <div>
+        {renderInvoices()}
+      </div>
     </Template>
   );
 }

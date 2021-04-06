@@ -8,7 +8,7 @@ interface IAppState {
 
 const initialState: IAppState = {
   darkMode: false,
-  filterStatus: "ALL",
+  filterStatus: "all",
 };
 
 export const appSlice = createSlice({
