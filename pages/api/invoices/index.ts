@@ -24,7 +24,7 @@ async function handler(req, res) {
 
     const invoice = {
       id: nanoid(6),
-      createdAt: req.body.createdAt,
+      createdAt: new Date().toDateString(),
       paymentDue: req.body.paymentDue,
       description: req.body.description,
       paymentTerms: req.body.paymentTerms,
@@ -32,16 +32,16 @@ async function handler(req, res) {
       clientEmail: req.body.clientEmail,
       status: req.body.status,
       senderAddress: {
-        street: req.body.sender.street,
-        city: req.body.sender.city,
-        postCode: req.body.sender.postCode,
-        country: req.body.sender.country,
+        street: req.body.senderStreet,
+        city: req.body.senderCity,
+        postCode: req.body.senderPostCode,
+        country: req.body.senderCountry,
       },
       clientAddress: {
-        street: req.body.client.street,
-        city: req.body.client.street,
-        postCode: req.body.client.street,
-        country: req.body.client.street,
+        street: req.body.clientStreet,
+        city: req.body.clientCity,
+        postCode: req.body.clientPostCode,
+        country: req.body.clientCountry,
       },
       items: req.body.items,
       total: req.body.total,

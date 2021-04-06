@@ -92,11 +92,12 @@ export const fetchInvoiceDetails = (id: string) => async (dispatch) => {
   }
 };
 
-export const createInvoice = () => async (dispatch) => {
+export const createInvoice = (invoice: IInvoice) => async (dispatch) => {
   dispatch(loading());
   try {
-    const { data } = await axios.post(url);
-    dispatch(create(data));
+    console.log(invoice)
+    axios.post(url, invoice);
+    dispatch(create(invoice));
   } catch (err) {
     dispatch(error());
   }
