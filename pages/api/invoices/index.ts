@@ -1,6 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-import { nanoid } from "@reduxjs/toolkit";
+import { customAlphabet } from "nanoid/async";
 
 const MongoClient = require("mongodb").MongoClient;
 
@@ -23,7 +22,7 @@ async function handler(req, res) {
     const db = client.db();
 
     const invoice = {
-      id: nanoid(6),
+      id: customAlphabet("1234567890abcdef", 6),
       createdAt: new Date().toDateString(),
       paymentDue: req.body.paymentDue,
       description: req.body.description,

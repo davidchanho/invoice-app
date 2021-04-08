@@ -1,4 +1,5 @@
 import React from "react";
+import Template from "../../components/_layout/template";
 import Form from "../../components/_shared/form";
 import FormGroup from "../../components/_shared/form-group";
 import FormRow from "../../components/_shared/form-row";
@@ -10,7 +11,7 @@ function Create() {
   const { register, handleSubmit, values, errors, onSubmit } = useCreateForm();
 
   return (
-    <div>
+    <Template>
       <h1>New Invoice</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <h2>Bill From</h2>
@@ -67,7 +68,7 @@ function Create() {
           </div>
         </FormRow>
       </Form>
-    </div>
+    </Template>
   );
 }
 

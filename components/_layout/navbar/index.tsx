@@ -10,9 +10,7 @@ function Navbar() {
       <Logo src="/assets/logo.svg" alt="logo icon" width={40} height={40} />
       <span className="spacer" />
       <ToggleDarkMode />
-      <div>
-        <Avatar />
-      </div>
+      <Avatar />
     </Nav>
   );
 }

@@ -2,21 +2,25 @@ import { between } from "polished";
 import styled from "styled-components";
 
 export const Button = styled.button`
-  color: white;
   border-radius: 24px;
-  width: ${between("73px", "350px")};
+  width: ${between("73px", "120px")};
   height: 48px;
   border: none;
   outline: none;
   cursor: pointer;
   font-weight: bold;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const PrimaryButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.textColorOnPrimary};
+  
   &:hover {
-    background-color: ${(props) => props.theme.colors.lightPrimary};
+    background-color: ${(props) => props.theme.colors.primaryHover};
   }
 `;
 

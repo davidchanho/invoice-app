@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import Template from "../../components/_layout/template";
 import {
   DangerButton,
   PrimaryButton,
   SecondaryButton,
 } from "../../components/_shared/buttons";
 
-function InvoiceDetails() {
+function Invoice() {
   const router = useRouter();
   const { id } = router.query;
 
   return (
-    <>
+    <Template>
       <Link href="/">go back</Link>
       <header>
         <div>Status</div>{" "}
@@ -25,8 +26,8 @@ function InvoiceDetails() {
       <div>
         <div>{id}</div>
       </div>
-    </>
+    </Template>
   );
 }
 
-export default InvoiceDetails;
+export default Invoice;

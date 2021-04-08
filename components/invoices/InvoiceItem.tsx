@@ -9,30 +9,30 @@ function InvoiceItem({ id, createdAt, clientName, total, status }: IInvoice) {
     <Link
       href={{
         pathname: "/[id]",
-        query: { id, createdAt, clientName, total, status },
+        query: { id },
       }}
     >
-      <tr>
-        <td>
+      <li>
+        <p>
           #<b>{id}</b>
-        </td>
-        <td>{createdAt} </td>
-        <td>{clientName}</td>
-        <td>
+        </p>
+        <p>{createdAt} </p>
+        <p>{clientName}</p>
+        <p>
           <b>£{total}</b>
-        </td>
-        <td>
+        </p>
+        <p>
           <Status status={status}>{status}</Status>
-        </td>
-        <td>
+        </p>
+        <p>
           <Icon
             src="/assets/icon-arrow-right.svg"
             alt="right arrow"
             width={4}
             height={8}
           />
-        </td>
-      </tr>
+        </p>
+      </li>
     </Link>
   );
 }

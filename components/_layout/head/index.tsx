@@ -15,6 +15,11 @@ function NextHead() {
           ? "window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function(){}"
           : ""}
       </script>
+
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Spartan:400,700"
+      ></link>
     </Head>
   );
 }
