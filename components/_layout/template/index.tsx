@@ -1,11 +1,16 @@
 import React from "react";
 import { SkeletonTheme } from "react-loading-skeleton";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { selectApp } from "../../../app/appSlice";
 import { useAppSelector } from "../../../app/hooks";
 import { darkTheme, lightTheme } from "../../../styles/theme";
 import NextHead from "../head";
 import SideBar from "../navbar";
+
+const Section = styled.section`
+  width: 80%;
+  margin: 0 auto;
+`;
 
 function Template({ children }) {
   const { darkMode } = useAppSelector(selectApp);
@@ -18,7 +23,7 @@ function Template({ children }) {
         <NextHead />
         <div>
           <SideBar />
-          {children}
+          <Section>{children}</Section>
         </div>
       </SkeletonTheme>
     </ThemeProvider>

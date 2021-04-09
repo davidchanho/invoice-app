@@ -15,9 +15,7 @@ async function handler(req, res) {
   if (req.method === "GET") {
     const db = client.db();
 
-    const docs = await db
-      .collection("invoices")
-      .findOne({ id: req.body.id })
+    const docs = await db.collection("invoices").findOne({ id: req.body.id });
     res.status(200).json(docs);
   }
 
@@ -38,7 +36,7 @@ async function handler(req, res) {
         city: req.body.senderCity,
         postCode: req.body.senderPostCode,
         country: req.body.senderCountry,
-      },
+      },  
       clientAddress: {
         street: req.body.clientStreet,
         city: req.body.clientCity,
