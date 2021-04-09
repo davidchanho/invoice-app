@@ -15,7 +15,7 @@ export const Button = styled.button`
 
 export const PrimaryButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.textColorOnPrimary};
+  color: ${(props) => props.theme.colors.primarytext};
   width: 150px;
 
   &:hover {
@@ -25,7 +25,7 @@ export const PrimaryButton = styled(Button)`
 
 export const DangerButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.danger};
-  color: ${(props) => props.theme.colors.textColorOnDanger};
+  color: ${(props) => props.theme.colors.dangerText};
   width: 89px;
 
   &:hover {
@@ -35,7 +35,7 @@ export const DangerButton = styled(Button)`
 
 export const SecondaryButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.secondary};
-  color: ${(props) => props.theme.colors.textColorOnSecondary};
+  color: ${(props) => props.theme.colors.secondaryText};
   width: 73px;
 
   &:hover {
@@ -45,7 +45,7 @@ export const SecondaryButton = styled(Button)`
 
 export const TertiaryButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.tertiary};
-  color: ${(props) => props.theme.colors.textColorOnTertiary};
+  color: ${(props) => props.theme.colors.tertiaryText};
   width: 73px;
 
   &:hover {
@@ -55,7 +55,7 @@ export const TertiaryButton = styled(Button)`
 
 export const QuaternaryButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.quaternary};
-  color: ${(props) => props.theme.colors.textColorOnQuaternary};
+  color: ${(props) => props.theme.colors.quaternaryText};
   width: 73px;
 
   &:hover {

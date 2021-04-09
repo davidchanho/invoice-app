@@ -1,30 +1,11 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import Skeleton from "react-loading-skeleton";
-import styled from "styled-components";
 import { selectApp } from "../../app/appSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { fetchInvoices, selectInvoices } from "../../app/invoicesSlice";
 import InvoiceItem from "./InvoiceItem";
-
-const List = styled.ul`
-  li {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    p {
-      width: 20%;
-    }
-  }
-`;
-
-const SkeletonItem = styled(Skeleton)`
-  height: 72px;
-  width: 100%;
-  margin-bottom: 16px;
-  border-radius: 8px;
-`;
+import { List } from "./Invoices.styles";
+import InvoiceSkeleton from "./InvoiceSkeleton";
 
 const useInvoices = () => {
   const { invoices, loading, error } = useAppSelector(selectInvoices);
@@ -41,11 +22,7 @@ const useInvoices = () => {
 
   const renderInvoices = () => {
     if (loading) {
-      return (
-        <List>
-          <SkeletonItem count={7} />
-        </List>
-      );
+      return <InvoiceSkeleton />;
     }
 
     if (error) {

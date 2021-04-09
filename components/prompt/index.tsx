@@ -1,8 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import CancelButton from "../_shared/buttons/CancelButton";
+import DeleteButton from "../_shared/buttons/DeleteButton";
 
 const StyledPrompt = styled.div`
-  
+  width: 480px;
+  height: 249px;
+  padding: 48px;
+  border-radius: 8px;
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 `;
 
 function Prompt() {
@@ -14,8 +24,8 @@ function Prompt() {
         undone.
       </p>
       <footer>
-        <button>cancel</button>
-        <button>delete</button>
+        <CancelButton />
+        <DeleteButton />
       </footer>
     </StyledPrompt>
   );

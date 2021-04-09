@@ -7,12 +7,7 @@ import useInvoices from "../components/invoices/useInvoices";
 import Template from "../components/_layout/template";
 import { PrimaryButton } from "../components/_shared/buttons";
 import { Icon } from "../components/_shared/icons";
-
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
+import Row from "../components/_shared/row";
 
 const Section = styled.header`
   width: 80%;

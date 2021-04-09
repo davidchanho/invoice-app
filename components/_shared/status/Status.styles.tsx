@@ -10,13 +10,14 @@ const StyledStatus = styled.div<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme.colors[props.status]};
+  background-color: ${(props) => props.theme.colors[`${props.status}Hover`]};
   color: ${(props) => props.theme.colors[props.status]};
   span {
     border-radius: 50%;
     background-color: ${(props) => props.theme.colors[props.status]};
     width: 0.66rem;
     height: 0.66rem;
+    margin-right: 5px;
   }
 `;
 

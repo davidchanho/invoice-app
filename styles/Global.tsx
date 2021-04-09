@@ -14,16 +14,7 @@ import {
 const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  ${normalize()}
-
-   @font-face {
+  @font-face {
     font-family: ${fontFamily};
     src: url('/fonts/Spartan-Bold.ttf') format("truetype");
     font-weight: 700;
@@ -33,6 +24,14 @@ body {
     src: url('/fonts/Spartan-Medium.ttf') format("truetype");
     font-weight: 400;
   }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  ${normalize()}
 
   font-family: ${fontFamily};
   font-size: 12px;
