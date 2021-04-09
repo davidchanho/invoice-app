@@ -14,7 +14,6 @@ import {
 const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
-  font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -24,7 +23,20 @@ html {
 body {
   ${normalize()}
 
+   @font-face {
+    font-family: ${fontFamily};
+    src: url('/fonts/Spartan-Bold.ttf') format("truetype");
+    font-weight: 700;
+  }
+   @font-face {
+    font-family: ${fontFamily};
+    src: url('/fonts/Spartan-Medium.ttf') format("truetype");
+    font-weight: 400;
+  }
+
   font-family: ${fontFamily};
+  font-size: 12px;
+
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -70,6 +82,11 @@ body {
       letter-spacing:  ${paragraph2.letterSpacing};
       font-weight: 400;
     }
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
   }
 }
 

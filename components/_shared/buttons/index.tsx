@@ -1,9 +1,7 @@
-import { between } from "polished";
 import styled from "styled-components";
 
 export const Button = styled.button`
   border-radius: 24px;
-  width: ${between("73px", "120px")};
   height: 48px;
   border: none;
   outline: none;
@@ -18,7 +16,8 @@ export const Button = styled.button`
 export const PrimaryButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.textColorOnPrimary};
-  
+  width: 150px;
+
   &:hover {
     background-color: ${(props) => props.theme.colors.primaryHover};
   }
@@ -26,26 +25,43 @@ export const PrimaryButton = styled(Button)`
 
 export const DangerButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.danger};
+  color: ${(props) => props.theme.colors.textColorOnDanger};
+  width: 89px;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.lightDanger};
+    background-color: ${(props) => props.theme.colors.dangerHover};
   }
 `;
 
 export const SecondaryButton = styled(Button)`
-  background-color: ${(props) => props.theme.colors.lightSecondary};
-  color: ${(props) => props.theme.colors.lightSecondary};
+  background-color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.textColorOnSecondary};
+  width: 73px;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.secondary};
-    color: ${(props) => props.theme.colors.secondary};
+    background-color: ${(props) => props.theme.colors.secondaryHover};
+    color: ${(props) => props.theme.colors.textColorOnSecondary};
   }
 `;
 
-export const DarkButton = styled(Button)`
-  background-color: ${(props) => props.theme.colors.lightDark};
+export const TertiaryButton = styled(Button)`
+  background-color: ${(props) => props.theme.colors.tertiary};
+  color: ${(props) => props.theme.colors.textColorOnTertiary};
+  width: 73px;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.dark};
+    background-color: ${(props) => props.theme.colors.tertiaryHover};
+    color: ${(props) => props.theme.colors.textColorOnTertiary};
+  }
+`;
+
+export const QuaternaryButton = styled(Button)`
+  background-color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.textColorOnQuaternary};
+  width: 73px;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.quaternaryHover};
+    color: ${(props) => props.theme.colors.textColorOnQuaternary};
   }
 `;

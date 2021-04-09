@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Invoice app solution
 
-## Getting Started
+This is a solution to the [Invoice app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/invoice-app-i7KaLTQjl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Frontend Mentor - Invoice app solution](#frontend-mentor---invoice-app-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Overview
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### The challenge
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Users should be able to:
 
-## Learn More
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Create, read, update, and delete invoices
+- Receive form validations when trying to create/edit an invoice
+- Save draft invoices, and mark pending invoices as paid
+- Filter invoices by status (draft/pending/paid)
+- Toggle light and dark mode
+- **Bonus**: Keep track of any changes, even after refreshing the browser (`localStorage` could be used for this if you're not building out a full-stack app)
 
-To learn more about Next.js, take a look at the following resources:
+### Screenshot
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![](./screenshot.jpg)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Links
 
-## Deploy on Vercel
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## My process
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Built with
+
+- Semantic HTML5 markup
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Redux Toolkit](https://redux-toolkit.js.org/) - Redux, React-Redux Immer, Nanoid to make Redux easier to write
+- [Redux Persist](https://github.com/rt2zz/redux-persist)
+- [Styled Components](https://styled-components.com/) - For styles
+- [Polished](https://polished.js.org/) - Toolset for writing js styles
+- [Storybook](https://storybook.js.org/) - For Documentation
+- [React Hook Form](https://react-hook-form.com/) - for hook based form 
+- [Yup](https://www.npmjs.com/package/yup) - for form validation
+- [MongdoDB Atlas](https://www.mongodb.com/cloud/atlas) - for database
+- [Axios](https://www.npmjs.com/package/axios) - for api calls
+- [Moxios](https://www.npmjs.com/package/moxios) - for test api calls
+- [Swagger](https://app.swaggerhub.com/) - for documenting api
+- [Jest](https://jestjs.io/) - testing react
+- [React Test Renderer](https://www.npmjs.com/package/react-test-renderer) - test render
+- [React Testing Library](https://testing-library.com/) - test react
+- [Framer Motion](https://www.framer.com/motion/) - react animation
+- [React Loading Skeleton](https://www.npmjs.com/package/react-loading-skeleton) - react loading skeleton
+
+### What I learned
+
+### Continued development
+
+### Useful resources
+
+- [Design Systems with React & Storybook by Emma Bostian](https://frontendmasters.com/courses/design-systems/) - This helped me working with styled components, design systems and storybook.
+- [Design for Developers by Sarah Drasner](https://frontendmasters.com/courses/design-for-developers/) - This helped me understand basics of design theory.
+
+- [Introduction to Next.js by Scott Moss](https://frontendmasters.com/courses/next-js/) - This helped me with using paths and rest api with Next.js.
+- [Production-Grade Next.js by Scott Moss](https://frontendmasters.com/courses/production-next/) - This helped me how to work with next.js in a professional manner.
+
+- [Introduction to Serverless Functions by Jason Lengstorf](https://frontendmasters.com/courses/serverless-functions/) - This helped me understand serverless functions.
+
+- [Building Modern Applications with Next.js and MongoDB by Ado Kukic](https://developer.mongodb.com/how-to/nextjs-with-mongodb/) - This is an amazing article which helped me set up next.js with Mongodb Atlas.
+
+## Author
+
+- Website - [David Chan Ho](https://www.davidchanho.com)
+- Frontend Mentor - [@davidchanho](https://www.frontendmentor.io/profile/davidchanho)
+
+## Acknowledgments
+
+To all everyone in the Frontend Mentor Slack!
