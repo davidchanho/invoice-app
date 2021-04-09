@@ -40,7 +40,6 @@ export const SecondaryButton = styled(Button)`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.secondaryHover};
-    color: ${(props) => props.theme.colors.textColorOnSecondary};
   }
 `;
 
@@ -51,7 +50,6 @@ export const TertiaryButton = styled(Button)`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.tertiaryHover};
-    color: ${(props) => props.theme.colors.textColorOnTertiary};
   }
 `;
 
@@ -62,6 +60,5 @@ export const QuaternaryButton = styled(Button)`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.quaternaryHover};
-    color: ${(props) => props.theme.colors.textColorOnQuaternary};
   }
 `;

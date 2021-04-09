@@ -8,7 +8,13 @@ import ItemForm from "./ItemForm";
 import useCreateForm from "./useCreateForm";
 
 function Create() {
-  const { register, handleSubmit, values, errors, onSubmit } = useCreateForm();
+  const {
+    register,
+    handleSubmit,
+    values,
+    errors,
+    onSubmit,
+  } = useCreateForm();
 
   return (
     <Template>
@@ -63,7 +69,7 @@ function Create() {
           </div>
 
           <div>
-            <input type="submit" value="Save as Draft" />
+            <input type="button" value="Save as Draft" />
             <input type="submit" value="Save & Send" />
           </div>
         </FormRow>

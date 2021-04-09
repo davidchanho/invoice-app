@@ -10,7 +10,7 @@ function Status({ status, children }: PropsWithChildren<Props>) {
           ? "success"
           : status === "pending"
           ? "warning"
-          : "blue"
+          : "secondary"
       }
     >
       <span /> {children}

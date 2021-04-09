@@ -14,7 +14,7 @@ function Template({ children }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <SkeletonTheme color="#000000" highlightColor="#444">
+      <SkeletonTheme>
         <NextHead />
         <div>
           <SideBar />
