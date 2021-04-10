@@ -1,12 +1,12 @@
-import React from 'react'
-import { DangerButton } from '.'
+import React from "react";
+import { DangerButton } from ".";
 
 function DeleteButton() {
-    return (
-        <DangerButton>
-            Delete
-        </DangerButton>
-    )
+  return (
+    <>
+      <DangerButton>Delete</DangerButton>
+    </>
+  );
 }
 
-export default DeleteButton
+export default DeleteButton;

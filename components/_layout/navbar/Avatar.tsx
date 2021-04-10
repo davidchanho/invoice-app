@@ -1,22 +1,17 @@
 import React from "react";
-import styled from "styled-components";
-import { RoundedIcon } from "../icons";
-
-const Bg = styled.div`
-  padding: 32px;
-  border-left: 1px solid ${(props) => props.theme.colors.darker};
-`;
+import { RoundedIcon } from "../../_shared/icons";
+import { AvatarContainer } from "./Avatar.styles";
 
 function Avatar() {
   return (
-    <Bg>
+    <AvatarContainer>
       <RoundedIcon
         src="/assets/image-avatar.jpg"
         alt="avatar image"
         width={32}
         height={32}
       />
-    </Bg>
+    </AvatarContainer>
   );
 }
 

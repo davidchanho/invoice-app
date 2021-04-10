@@ -12,6 +12,8 @@ import {
 } from "./fonts";
 
 const GlobalStyle = createGlobalStyle`
+${normalize()}
+
 html {
   box-sizing: border-box;
   @font-face {
@@ -31,10 +33,8 @@ html {
 }
 
 body {
-  ${normalize()}
-
   font-family: ${fontFamily};
-  font-size: 12px;
+  font-size: 0.75rem;
 
   margin: 0;
   -webkit-font-smoothing: antialiased;

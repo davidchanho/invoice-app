@@ -1,3 +1,4 @@
+import { breakpoints } from './breakpoints';
 import { black, green, grey, purple, red, white, yellow } from "./colors";
 
 export const defaultTheme = {
@@ -28,6 +29,7 @@ export const defaultTheme = {
     darker: grey['600'],
     black: black["500"],
   },
+  breakpoints,
 };
 
 export const lightTheme = {

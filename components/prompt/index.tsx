@@ -4,10 +4,10 @@ import CancelButton from "../_shared/buttons/CancelButton";
 import DeleteButton from "../_shared/buttons/DeleteButton";
 
 const StyledPrompt = styled.div`
-  width: 480px;
-  height: 249px;
-  padding: 48px;
-  border-radius: 8px;
+  width: 30rem;
+  height: 15.5625rem;
+  padding: 3rem;
+  border-radius: 0.5rem;
   footer {
     display: flex;
     align-items: center;

@@ -3,20 +3,16 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import Template from "../../components/_layout/template";
 import {
-  DangerButton,
   PrimaryButton,
   SecondaryButton,
 } from "../../components/_shared/buttons";
+import DeleteButton from "../../components/_shared/buttons/DeleteButton";
 import Row from "../../components/_shared/row";
 import Status from "../../components/_shared/status";
 
 function Invoice() {
   const router = useRouter();
   const { id } = router.query;
-
-  useEffect(() => {
-    
-  }, []);
 
   return (
     <Template>
@@ -33,7 +29,7 @@ function Invoice() {
         </Row>{" "}
         <Row>
           <SecondaryButton>Edit</SecondaryButton>
-          <DangerButton>Delete</DangerButton>
+          <DeleteButton />
           <PrimaryButton>Mark as Paid</PrimaryButton>
         </Row>
       </Row>

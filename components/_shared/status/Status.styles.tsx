@@ -17,7 +17,7 @@ const StyledStatus = styled.div<Props>`
     background-color: ${(props) => props.theme.colors[props.status]};
     width: 0.66rem;
     height: 0.66rem;
-    margin-right: 5px;
+    margin-right: 0.3125rem;
   }
 `;
 

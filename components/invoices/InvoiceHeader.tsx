@@ -9,22 +9,20 @@ function InvoiceHeader() {
   const { invoices } = useAppSelector(selectInvoices);
 
   return (
-    <header>
+    <Row>
+      <div>
+        <h1>Invoices</h1>
+        <p>
+          {invoices.length
+            ? `There are ${invoices.length} total invoices`
+            : "No invoices"}
+        </p>
+      </div>
       <Row>
-        <div>
-          <h1>Invoices</h1>
-          <p>
-            {invoices.length
-              ? `There are ${invoices.length} total invoices`
-              : "No invoices"}
-          </p>
-        </div>
-        <Row>
-          <FilterStatusSelect />
-          <NewInvoiceButton />
-        </Row>
+        <FilterStatusSelect />
+        <NewInvoiceButton />
       </Row>
-    </header>
+    </Row>
   );
 }
 
