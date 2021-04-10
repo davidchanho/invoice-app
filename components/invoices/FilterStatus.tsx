@@ -1,30 +1,10 @@
 import React, { ChangeEvent, useState } from "react";
-import styled from "styled-components";
 import { changeStatus, selectApp } from "../../app/appSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import Row from "../_shared/grid/Row";
+import { Button, Form, Select } from "./FilterStatus.styles";
 
-const Select = styled.div`
-  background-color: inherit;
-  margin-right: 0.9375rem;
-  position: relative;
-`;
-
-const Button = styled.button`
-  outline: none;
-  border: none;
-  background-color: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const Form = styled.form`
-  position: absolute;
-  background-color: ${(props) => props.theme.colors.white};
-`;
-
-function FilterStatusSelect() {
+function FilterStatus() {
   const dispatch = useAppDispatch();
   const { filterStatus } = useAppSelector(selectApp);
 
@@ -72,4 +52,4 @@ function FilterStatusSelect() {
   );
 }
 
-export default FilterStatusSelect;
+export default FilterStatus;

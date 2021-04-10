@@ -5,7 +5,7 @@ import InvoiceSkeletonItem from "./InvoiceSkeleton.styles";
 function InvoiceSkeleton() {
   return (
     <List>
-      <InvoiceSkeletonItem count={7} />
+      <InvoiceSkeletonItem count={5} />
     </List>
   );
 }

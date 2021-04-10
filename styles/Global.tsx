@@ -41,7 +41,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: ${grey["100"]};
 
   h1 {
     font-size: ${header1.fontSize};

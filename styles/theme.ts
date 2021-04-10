@@ -1,4 +1,4 @@
-import { breakpoints } from './breakpoints';
+import { breakpoints } from "./breakpoints";
 import { black, green, grey, purple, red, white, yellow } from "./colors";
 
 export const defaultTheme = {
@@ -6,10 +6,6 @@ export const defaultTheme = {
     primary: purple["200"],
     primaryHover: purple["100"],
     primaryText: white["100"],
-
-    secondary: grey["100"],
-    secondaryHover: grey["200"],
-    secondaryText: grey["300"],
 
     danger: red["200"],
     dangerHover: red["100"],
@@ -26,7 +22,7 @@ export const defaultTheme = {
     white: white["100"],
 
     dark: grey["500"],
-    darker: grey['600'],
+    darker: grey["600"],
     black: black["500"],
   },
   breakpoints,
@@ -38,6 +34,10 @@ export const lightTheme = {
   colors: {
     ...defaultTheme.colors,
 
+    secondary: grey["100"],
+    secondaryHover: grey["200"],
+    secondaryText: grey["300"],
+
     tertiary: grey["700"],
     tertiaryHover: grey["200"],
     tertiaryText: grey["200"],
@@ -47,6 +47,7 @@ export const lightTheme = {
     quaternaryText: grey["400"],
 
     background: grey["100"],
+    text: black["200"],
   },
 };
 
@@ -55,6 +56,10 @@ export const darkTheme = {
 
   colors: {
     ...defaultTheme.colors,
+
+    secondary: black["300"],
+    secondaryHover: grey["200"],
+    secondaryText: white["100"],
 
     tertiary: grey["100"],
     tertiaryHover: black["100"],
@@ -65,5 +70,6 @@ export const darkTheme = {
     quaternaryText: black["200"],
 
     background: black["400"],
+    text: white["100"],
   },
 };

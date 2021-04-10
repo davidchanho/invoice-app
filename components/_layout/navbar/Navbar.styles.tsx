@@ -6,7 +6,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   background-color: ${(props) => props.theme.colors.dark};
   margin-bottom: 3.8125rem;
-
+  
   .spacer {
     flex: 0.9;
   }

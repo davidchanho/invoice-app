@@ -3,7 +3,7 @@ import { useAppSelector } from "../../app/hooks";
 import { selectInvoices } from "../../app/invoicesSlice";
 import NewInvoiceButton from "../_shared/buttons/NewInvoiceButton";
 import Row from "../_shared/grid/Row";
-import FilterStatusSelect from "./FilterStatusSelect";
+import FilterStatus from "./FilterStatus";
 import { InvoiceHeaderContainer } from "./InvoiceHeader.styles";
 
 function InvoiceHeader() {
@@ -20,7 +20,7 @@ function InvoiceHeader() {
         <p>{invoiceTotal}</p>
       </div>
       <Row>
-        <FilterStatusSelect />
+        <FilterStatus />
         <NewInvoiceButton />
       </Row>
     </InvoiceHeaderContainer>
