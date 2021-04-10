@@ -41,6 +41,10 @@ const useInvoices = () => {
         {filteredInvoices?.map((invoice) => {
           return <InvoiceItem key={invoice.id} {...invoice} />;
         })}
+        <ul>
+          <li>1</li>
+          <li>2</li>
+        </ul>
       </List>
     );
   };

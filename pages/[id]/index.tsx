@@ -7,7 +7,7 @@ import {
   SecondaryButton,
 } from "../../components/_shared/buttons";
 import DeleteButton from "../../components/_shared/buttons/DeleteButton";
-import Row from "../../components/_shared/row";
+import Row from "../../components/_shared/grid/Row";
 import Status from "../../components/_shared/status";
 
 function Invoice() {

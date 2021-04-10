@@ -12,13 +12,14 @@ const StyledStatus = styled.div<Props>`
   justify-content: center;
   background-color: ${(props) => props.theme.colors[`${props.status}Hover`]};
   color: ${(props) => props.theme.colors[props.status]};
-  span {
-    border-radius: 50%;
-    background-color: ${(props) => props.theme.colors[props.status]};
-    width: 0.66rem;
-    height: 0.66rem;
-    margin-right: 0.3125rem;
-  }
+`;
+
+export const Dot = styled.span<Props>`
+  border-radius: 50%;
+  background-color: ${(props) => props.theme.colors[props.status]};
+  width: 0.66rem;
+  height: 0.66rem;
+  margin-right: 0.3125rem;
 `;
 
 export default StyledStatus;

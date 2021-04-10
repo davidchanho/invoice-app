@@ -1,6 +1,6 @@
 import React from "react";
-import FormGroup from "../../components/_shared/form-group";
-import FormRow from "../../components/_shared/form-row";
+import FormGroup from "../../components/_shared/form/FormGroup";
+import FormRow from "../../components/_shared/form/FormRow";
 import { AddressFormProps } from "./AddressForm.types";
 
 function AddressForm({ register, receiver, errors }: AddressFormProps) {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Input } from "../input";
+import { Input } from "../form/Input";
 
 export const DatePicker = styled(Input)``;
 

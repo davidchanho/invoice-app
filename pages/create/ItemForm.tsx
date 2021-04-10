@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "../../components/_shared/form";
-import FormRow from "../../components/_shared/form-row";
+import FormRow from "../../components/_shared/form/FormRow";
 import { Icon } from "../../components/_shared/icons";
 import useItemForm from "./useItemForm";
 

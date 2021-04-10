@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Row from "../row";
+import Row from "./Row";
 
 const Col = styled(Row)`
   display: flex;
