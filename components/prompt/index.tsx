@@ -1,23 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import CancelButton from "../_shared/buttons/CancelButton";
 import DeleteButton from "../_shared/buttons/DeleteButton";
-
-const StyledPrompt = styled.div`
-  width: 30rem;
-  height: 15.5625rem;
-  padding: 3rem;
-  border-radius: 0.5rem;
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-`;
+import { PromptContainer } from "./Prompt.styles";
 
 function Prompt() {
   return (
-    <StyledPrompt>
+    <PromptContainer>
       <h1>Confirm Deletion</h1>
       <p>
         Are you sure you want to delete invoice #XM9141? This action cannot be
@@ -27,7 +15,7 @@ function Prompt() {
         <CancelButton />
         <DeleteButton />
       </footer>
-    </StyledPrompt>
+    </PromptContainer>
   );
 }
 
