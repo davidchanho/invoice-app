@@ -9,4 +9,14 @@ export const fadeIn = keyframes`
   }
 `;
 
-export const transitionColor = `background-color 1s ease-in-out, color 1s ease-in-out`
+export const drawerOut = keyframes`
+  from {
+    left: -4%;
+  }
+  to {
+    left: 4%;
+  }
+`;
+
+export const transitionColor =
+  "background-color 1s ease-in-out, color 1s ease-in-out";

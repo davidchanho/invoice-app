@@ -3,7 +3,12 @@ import Row from "../_shared/grid/Row";
 
 export const InvoiceHeaderContainer = styled(Row)`
   padding: 2rem;
-  h1, p {
-    margin: 0;
-  }
+`;
+
+export const InvoiceTitle = styled.h1`
+  margin-bottom: 0.4rem;
+`;
+
+export const InvoiceSubTitle = styled.p`
+  margin-bottom: 0;
 `;

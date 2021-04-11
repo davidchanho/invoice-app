@@ -4,7 +4,11 @@ import { selectInvoices } from "../../app/invoicesSlice";
 import NewInvoiceButton from "../_shared/buttons/NewInvoiceButton";
 import Row from "../_shared/grid/Row";
 import FilterStatus from "./FilterStatus";
-import { InvoiceHeaderContainer } from "./InvoiceHeader.styles";
+import {
+  InvoiceHeaderContainer,
+  InvoiceSubTitle,
+  InvoiceTitle,
+} from "./InvoiceHeader.styles";
 
 function InvoiceHeader() {
   const { invoices } = useAppSelector(selectInvoices);
@@ -16,8 +20,8 @@ function InvoiceHeader() {
   return (
     <InvoiceHeaderContainer>
       <div>
-        <h1>Invoices</h1>
-        <p>{invoiceTotal}</p>
+        <InvoiceTitle>Invoices</InvoiceTitle>
+        <InvoiceSubTitle>{invoiceTotal}</InvoiceSubTitle>
       </div>
       <Row>
         <FilterStatus />

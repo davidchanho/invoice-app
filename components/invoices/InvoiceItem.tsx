@@ -14,20 +14,20 @@ function InvoiceItem({ id, createdAt, clientName, total, status }: IInvoice) {
       }}
     >
       <Item>
-        <p>
+        <li>
           #<b>{id}</b>
-        </p>
-        <p>Due {createdAt} </p>
-        <p>{clientName}</p>
-        <p>
+        </li>
+        <li>Due {createdAt} </li>
+        <li>{clientName}</li>
+        <li>
           <b>£{total ? total : 0}</b>
-        </p>
-        <p>
+        </li>
+        <li>
           <Status status={status}>{status}</Status>
-        </p>
-        <p>
+        </li>
+        <li>
           <RightArrow />
-        </p>
+        </li>
       </Item>
     </Link>
   );
