@@ -8,7 +8,6 @@ const useFetchInvoices = () => {
   useEffect(() => {
     dispatch(fetchInvoices());
   }, [dispatch]);
-
 };
 
 export default useFetchInvoices;

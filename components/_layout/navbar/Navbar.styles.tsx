@@ -7,6 +7,7 @@ const Nav = styled.nav`
   background-color: ${(props) => props.theme.colors.dark};
   margin-bottom: 3.8125rem;
   position: fixed;
+  z-index: 10;
   .spacer {
     flex: 0.9;
   }
