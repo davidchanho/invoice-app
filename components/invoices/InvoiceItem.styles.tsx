@@ -26,9 +26,9 @@ const Item = styled.ul`
   &:hover {
     background-color: ${(props) => props.theme.colors.secondaryHover};
     cursor: pointer;
-    transition: ${transitionColor};
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-    p {
+    li {
       color: ${(props) => props.theme.colors.quaternaryText};
     }
   }
