@@ -1,5 +1,4 @@
 import React from "react";
-import { SkeletonTheme } from "react-loading-skeleton";
 import { ThemeProvider } from "styled-components";
 import { selectApp } from "../../../app/appSlice";
 import { useAppSelector } from "../../../app/hooks";
@@ -14,13 +13,11 @@ function Template({ children }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <SkeletonTheme>
-        <NextHead />
-        <Main>
-          <SideBar />
-          <Section>{children}</Section>
-        </Main>
-      </SkeletonTheme>
+      <NextHead />
+      <Main>
+        <SideBar />
+        <Section>{children}</Section>
+      </Main>
     </ThemeProvider>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Form from "../../components/_shared/form";
 import FormRow from "../../components/_shared/form/FormRow";
 import { Icon } from "../../components/_shared/icons";
+import DeleteIcon from "../../components/_shared/icons/DeleteIcon";
 import useItemForm from "./useItemForm";
 
 function ItemForm() {
@@ -17,12 +18,7 @@ function ItemForm() {
         <input name="price" type="number" ref={register} />
         <p>{errors.price?.message}</p>
         <p>{total}</p>
-        <Icon
-          src="/assets/icon-delete.svg"
-          alt="delete item"
-          width={12}
-          height={16}
-        />
+        <DeleteIcon />
       </FormRow>
     </Form>
   );

@@ -13,7 +13,10 @@ export const Main = styled.main`
 `;
 
 export const Section = styled.section`
-  width: 100%;
   min-height: 100vh;
 
+  @media (min-width: ${(props) => props.theme.breakpoints.tablet}) {
+    width: 64%;
+    margin: 0 auto;
+  }
 `;

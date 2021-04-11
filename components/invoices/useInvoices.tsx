@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React, { useEffect } from "react";
 import { selectApp } from "../../app/appSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { fetchInvoices, selectInvoices } from "../../app/invoicesSlice";
+import InvoiceEmpty from "./InvoiceEmpty";
 import InvoiceItem from "./InvoiceItem";
 import { List } from "./Invoices.styles";
 import InvoiceSkeleton from "./InvoiceSkeleton";
@@ -26,14 +26,7 @@ const useInvoices = () => {
     }
 
     if (error) {
-      return (
-        <Image
-          src="/assets/illustration-empty.svg"
-          alt="no invoices found"
-          width={217}
-          height={277}
-        />
-      );
+      return <InvoiceEmpty />;
     }
 
     return (

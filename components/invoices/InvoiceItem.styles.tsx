@@ -12,7 +12,7 @@ const Item = styled(Row)`
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   transition: ${transitionColor};
-
+  
   p {
     margin-right: 1.8125rem;
     width: 10%;
@@ -29,6 +29,10 @@ const Item = styled(Row)`
     p {
       color: ${(props) => props.theme.colors.quaternaryText};
     }
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.tablet}) {
+    
   }
 `;
 

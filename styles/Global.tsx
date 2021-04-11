@@ -33,7 +33,6 @@ html {
 }
 
 body {
-  overflow-y: hidden;
 
   font-family: ${fontFamily};
   font-size: 0.75rem;

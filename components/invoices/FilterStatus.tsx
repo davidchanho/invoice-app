@@ -2,6 +2,7 @@ import React, { ChangeEvent, useState } from "react";
 import { changeStatus, selectApp } from "../../app/appSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import Row from "../_shared/grid/Row";
+import DownArrowIcon from "../_shared/icons/DownArrowIcon";
 import { Button, Form, Select } from "./FilterStatus.styles";
 
 function FilterStatus() {
@@ -21,13 +22,7 @@ function FilterStatus() {
   return (
     <Select>
       <Button onClick={toggleOpen}>
-        Filter by Status{" "}
-        <img
-          src="assets/icon-arrow-down.svg"
-          alt="status menu closed"
-          width={8.46}
-          height={4.23}
-        />
+        Filter by Status <DownArrowIcon width={8.46} height={4.23} />
       </Button>
 
       {open && (
